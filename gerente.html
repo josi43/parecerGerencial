@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Visita</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-right: 20rem;
+            margin-left: 20rem;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #0a0a0a;
+            text-align: left;
+        }
+ 
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        select, input, option {
+            width: 70%;
+            padding: 10px;
+            margin: 10px;
+            border: 0px solid #fcfcfc;
+            background-color: #ffffff;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: medium;
+        }
+        select {
+            appearance: none; 
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        select:hover {
+          
+            background-color: #f0c0c0;
+        }
+        option {
+          
+            padding: 5px;
+        }
+        option:hover {
+       
+            background-color: #ffbfbf;
+        }
+    </style>
+</head>
+<body>
+    <table>
+		<img src="./assets/logo.png"/>
+        <tr>
+            <th colspan="2">Núcleo de Controle Interno e Compliance - NUCIC</th>
+        </tr>
+        <tr>
+            <th colspan="2">Subnúcleo de Prevenção à Lavagem de Dinheiro e Anticorrupção</th>
+        </tr>
+        <tr>
+            <th colspan="2">POLÍTICA "CONHEÇA SEU CLIENTE" - MNP DE PREVENÇÃO AO CRIME DE LAVAGEM DE DINHEIRO</th>
+        </tr>
+    </table>
+    <table>
+
+    <th><h3>Leis Aplicáveis:</h3></th>
+    <td>
+    <ul>
+        <li>Lei 9.613/98</li>
+        <li>Lei 12.683/12</li>
+        <li>Circular BACEN 3.461</li>
+    </ul>
+    </td>
+    </table>
+    <table>
+        <tr>
+            <th>1. UNIDADE:</th>
+        </tr>
+        <tr>
+            <th>1.1 IDENTIFICAÇÃO DO CLIENTE</th>
+        </tr>
+        <tr>
+            <td><b>Nome:</b><input type="text" id="cliente_nome"></td>
+        </tr>
+        <tr>
+            <td><b>CPF/CNPJ:</b> <input type="number" id="cliente_cpf_cnpj"></td>
+            
+        </tr>
+        <tr>
+            <td><b>Data de Nascimento/Início da Atividade:</b> <input type="text" id="cliente_data_nascimento"></td>
+          
+        </tr>
+        <tr>
+            <td><b>Cliente desde:</b> <input type="date" id="cliente_desde"></td>
+           
+        </tr>
+        <tr>
+            <td><b>Agência: </b><input type="number" id="cliente_agencia"></td>
+          
+        </tr>
+        <tr>
+            <td><b>Nº da Conta:</b>  <select name="visita" id="cliente_conta">
+                <option>Selecione:</option>
+                <option value="conta_corrente">Conta corrente</option>
+                <option value="poupanca">Poupança</option>
+            </select></td>
+           
+        </tr>
+        <tr>
+            <td><b>Fone:</b> <input type="number" id="cliente_fone"></td>
+        </tr>
+        <tr>
+            <td><b>Endereço:</b> <input type="text" id="cliente_endereco"></td>
+        </tr>
+        <tr>
+            <td><b>PERGUNTA: A localização do Cliente/Atividade é consistente com as declarações fornecidas?</b>   <select name="visita" id="pergunta_localizacao">
+                <option>Selecione:</option>
+                <option value="SIM">Sim</option>
+                <option value="NÃO">Não</option>
+                <option value="NSA">Não se Aplica</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><b>Justifique (caso negativo):</b> <input type="text" id="justificativa_localizacao"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>2. SITUAÇÃO CADASTRAL:</th>
+           
+        </tr>
+        <tr>
+            <td><b>Data da última atualização:</b><br>
+                <input type="date" id="data_atualizacao">
+                <select name="status_atualizacao" id="status_atualizacao">
+                    <option>Selecione:</option>
+                    <option value="atualizado">Atualizado</option>
+                    <option value="vencido">Vencido</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+        <th colspan="2">3. Identificação do procurador e referências</th>
+        </tr>
+        <tr>
+        <td><b>3.1 Conta movimentada por procuração?</b>
+            <select name="procuração" id="movimentacao_procuracao">
+                <option>Selecione:</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>         
+        </td>
+        <td>
+            <b>Data vencimento procuração:</b>
+            <input type="date">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Nome:</b>
+            <input type="text">
+        </td>
+        <td>
+            <b>CPF/CNPJ: </b>
+            <input type="text">
+        </td>
+    </tr>
+    <td colspan="2">
+        <b>Endereço:</b>
+        <input type="text">
+    </td>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">
+                <b> 4. Informações Econônico-Financeias</b>
+            </th>
+        </tr>
+            <td  colspan="2"    >
+                <b> Ocupação profissional/ramo de atividade:</b>
+                <input type="text">
+            </td>
+        <tr>
+            <td>
+                <b> Renda mensal/faturamento mensal:</b>
+                <input type="text">
+            </td>
+            <td>
+                <b> Movimentação Financeira Média Mensal:</b>
+                <input type="text">
+            </td>
+        </tr>
+        <td colspan="2">
+            <b>Detalhamento da origem/destinação dos recursos movimentados: </b>
+            <input type="text">
+        </td>
+        <tr>
+        <td>
+            <b>PERGUNTA:</b> A Movimentação Financeira é compatível com a Ocupação 
+            Profissional/Atividade e a Capacidade Econômico-Financeira/Faturamento
+             presumido do cliente? 
+        </td>
+        <td>
+            <select>
+            <option>Selecione:</option>
+            <option>Sim</option>
+            <option>Não</option>
+            </select>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Justifique (caso negativo):
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Veículos</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="3">5. PARECER DO GERENTE:</th>
+        </tr>
+        <tr>
+            <td><b>MOVIMENTAÇÃO NÃO SUSPEITA </b>
+                <select name="movimentacao" id="movimentacao_nao_suspeita">
+                    <option>Selecione:</option>
+                    <option value="movimentacao_n_suspeita">Movimentação não suspeita</option>
+                    <option value="movimentacao_suspeita">Movimentação suspeita</option>
+                </select>
+            </td>
+        
+            <td><b>DATA DA VISITA: </b><input type="date" id="cliente_desde">
+            <td><b>ASSINATURA E CARIMBO DO RESPONSÁVEL PELA VISITA: </b>
+                <input type="text" id="assinatura_responsavel"></td>
+        </tr>
+    </table>
+    <p>Este Relatório deverá ser obrigatoriamente arquivado e deverá ficar à disposição das Auditorias Interna, Externa e BACEN. As informações registradas neste Relatório são de caráter sigiloso e de exclusiva responsabilidade da Administração da Unidade.</p>
+</body>
+</html>
