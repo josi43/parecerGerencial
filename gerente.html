@@ -106,10 +106,10 @@
             <th>1.1 IDENTIFICAÇÃO DO CLIENTE</th>
         </tr>
         <tr>
-            <td><b>Nome:</b><input type="text" id="cliente_nome"></td>
+            <td><b>Nome:</b><p>&NMCLI</p></td>
         </tr>
         <tr>
-            <td><b>CPF/CNPJ:</b> <input type="number" id="cliente_cpf_cnpj"></td>
+            <td><b>CPF/CNPJ:</b> <p>&cpf_cnpj</p></td>
             
         </tr>
         <tr>
@@ -121,15 +121,17 @@
            
         </tr>
         <tr>
-            <td><b>Agência: </b><input type="number" id="cliente_agencia"></td>
+            <td><b>Agência: </b><p>&AGENCIA</p></td>
           
         </tr>
         <tr>
-            <td><b>Nº da Conta:</b>  <select name="visita" id="cliente_conta">
+            <td><b>Nº da Conta:</b>
+                <p>&CONTA</p><br>
+            <select name="visita" id="cliente_conta">
                 <option>Selecione:</option>
                 <option value="conta_corrente">Conta corrente</option>
                 <option value="poupanca">Poupança</option>
-            </select></td>
+            </select></td></td>
            
         </tr>
         <tr>
@@ -139,7 +141,8 @@
             <td><b>Endereço:</b> <input type="text" id="cliente_endereco"></td>
         </tr>
         <tr>
-            <td><b>PERGUNTA: A localização do Cliente/Atividade é consistente com as declarações fornecidas?</b>   <select name="visita" id="pergunta_localizacao">
+            <td><b>PERGUNTA: A localização do Cliente/Atividade é consistente com as declarações fornecidas?</b>  <br> 
+                <select name="visita" id="pergunta_localizacao">
                 <option>Selecione:</option>
                 <option value="SIM">Sim</option>
                 <option value="NÃO">Não</option>
@@ -157,8 +160,8 @@
            
         </tr>
         <tr>
-            <td><b>Data da última atualização:</b><br>
-                <input type="date" id="data_atualizacao">
+            <td><b>Data da última atualização:</b><br><br>
+                <input type="date" id="data_atualizacao"><br>
                 <select name="status_atualizacao" id="status_atualizacao">
                     <option>Selecione:</option>
                     <option value="atualizado">Atualizado</option>
@@ -172,7 +175,7 @@
         <th colspan="2">3. Identificação do procurador e referências</th>
         </tr>
         <tr>
-        <td><b>3.1 Conta movimentada por procuração?</b>
+        <td><b>3.1 Conta movimentada por procuração?</b><br>
             <select name="procuração" id="movimentacao_procuracao">
                 <option>Selecione:</option>
                 <option value="sim">Sim</option>
@@ -181,17 +184,17 @@
         </td>
         <td>
             <b>Data vencimento procuração:</b>
-            <input type="date">
+            <P>&RETORNO</P>
         </td>
     </tr>
     <tr>
         <td>
             <b>Nome:</b>
-            <input type="text">
+            <p>&NMCLI</p>
         </td>
         <td>
             <b>CPF/CNPJ: </b>
-            <input type="text">
+            <P>&CPF_CNPJ</P>
         </td>
     </tr>
     <td colspan="2">
@@ -201,30 +204,30 @@
     </table>
     <table>
         <tr>
-            <th colspan="2">
+            <th colspan="3">
                 <b> 4. Informações Econônico-Financeias</b>
             </th>
         </tr>
-            <td  colspan="2"    >
+            <td  colspan="3"    >
                 <b> Ocupação profissional/ramo de atividade:</b>
                 <input type="text">
             </td>
-        <tr>
-            <td>
+        <tr >
+            <td >
                 <b> Renda mensal/faturamento mensal:</b>
                 <input type="text">
             </td>
-            <td>
+            <td colspan="2">
                 <b> Movimentação Financeira Média Mensal:</b>
                 <input type="text">
             </td>
         </tr>
-        <td colspan="2">
+        <td colspan="3">
             <b>Detalhamento da origem/destinação dos recursos movimentados: </b>
             <input type="text">
         </td>
         <tr>
-        <td>
+        <td colspan="2">
             <b>PERGUNTA:</b> A Movimentação Financeira é compatível com a Ocupação 
             Profissional/Atividade e a Capacidade Econômico-Financeira/Faturamento
              presumido do cliente? 
@@ -238,26 +241,90 @@
         </td>
         </tr>
         <tr>
-            <td colspan="2">
+            <td colspan="3">
                 Justifique (caso negativo):
                 <input type="text">
             </td>
         </tr>
         <tr>
             <td>
-                <b>Veículos</b>
+                <b>Veículos</b><br>
+                <select>
+                    <option>Selecione:</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
             </td>
+            <td>
+                <b>Valor:</b>
+                <input type="number">
+            </td>
+            <td><b>Detalhar: </b> <input type="text"></td>
         </tr>
         <tr>
             <td>
-
+                <b>Bens Imóveis</b><br>
+                <select>
+                    <option>Selecione:</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
             </td>
+            <td>
+                <b>Valor:</b>
+                <input type="number">
+            </td>
+            <td><b>Detalhar: </b> <input type="text"></td>
         </tr>
         <tr>
             <td>
-
+                <b>Part. Societária</b><br>
+                <select>
+                    <option>Selecione:</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
             </td>
+            <td>
+                <b>Valor:</b>
+                <input type="number">
+            </td>
+            <td><b>Detalhar: </b> <input type="text"></td>
         </tr>
+        <tr>
+            <td>
+                <b>Outros bens</b><br>
+                <select>
+                    <option>Selecione:</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+            </td>
+            <td>
+                <b>Valor:</b>
+                <input type="number">
+            </td>
+            <td><b>Detalhar: </b> <input type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <b>PERGUNTA:</b> Os Bens patrimoniais são compatíveis com a Ocupação Profissional/Atividade e a 
+                Capacidade Econômico-Financeira/Faturamento presumido do cliente?  
+            </td>
+            <td>
+                <select>
+                <option>Selecione:</option>
+                <option>Sim</option>
+                <option>Não</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    Justifique (caso negativo):
+                    <input type="text">
+                </td>
+            </tr>
     </table>
     <table>
         <tr>
